@@ -10,7 +10,7 @@ const path = require('path')
 
 
 
-if(!dev){
+
     app.disable('x-powered-by')
     app.use(compression())
     app.use(express.static(path.resolve(__dirname, 'build')))
@@ -64,7 +64,7 @@ app.post('/api/email',(req,res)=> {
         
     })
 })
-}
+
 
 
 const normailePort = port => parseInt(port,10)
