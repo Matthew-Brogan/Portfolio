@@ -59,7 +59,7 @@ app.post('/api/email',(req,res)=> {
 
 
 
-const normalizePort = port => parseInt(port,10)
-const Port = normalizePort(process.env.Port || 3001)
-const server = createServer(app)
-server.listen(Port, () => {console.log('server listening on port ${Port}')})
+
+const Port = process.env.Port || 3001
+
+app.listen(Port, () => {console.log('server listening on port ${Port}')})
